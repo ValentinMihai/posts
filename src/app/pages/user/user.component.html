@@ -1,0 +1,62 @@
+<h2>User details</h2>
+<div class="container">
+    <form *ngIf="user">
+        <div class="row">
+            <div class="col-25">
+                <label>Name: </label>
+            </div>
+            <div class="col-75">
+                <label>{{user.name}}</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label>Username: </label>
+            </div>
+            <div class="col-75">
+                <label>{{user.username}}</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label>Email: </label>
+            </div>
+            <div class="col-75">
+                <label>{{user.email}}</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label>Address: </label>
+            </div>
+            <div class="col-75">
+                <label>{{user.address.street}} {{user.address.suite}} {{user.address.city}} {{user.address.zipcode}}</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label>Phone: </label>
+            </div>
+            <div class="col-75">
+                <label>{{user.phone}}</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label>Website: </label>
+            </div>
+            <div class="col-75">
+                <label>{{user.website}}</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label>Company: </label>
+            </div>
+            <div class="col-75">
+                <label>{{user.company.name}}</label>
+            </div>
+        </div>
+    </form>
+</div>
+<button mat-button class="back" routerLink="/home" routerLinkActive="active"> &laquo; back</button>
